@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
+
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import Main from './components/Main';
+import SubContents from './components/SubContents';
+import Advertisement from './components/Advertisement';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container p-3 text-center" style={{ backgroundColor: "grey" }}>
+      <Header />
+      <div className="d-flex my-5">
+        <Navigation />
+        <Main>
+          <div className="d-flex">
+          <SubContents />
+          <SubContents />
+          <SubContents />
+          </div>
+          <Advertisement />
+        </Main>
+      </div>
     </div>
   );
 }
